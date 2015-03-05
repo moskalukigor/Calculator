@@ -166,6 +166,9 @@ public class MainActivity extends ActionBarActivity {
                 Result();
             }
         });
+
+
+        Clear();
     }
 
     public void SetNumber(int i)
@@ -270,63 +273,55 @@ public class MainActivity extends ActionBarActivity {
         switch (znaks)
         {
             case '+':
-                if(a == null)
-                {
-                    znak = '+';
-                    a = Integer.parseInt(alTextBox.getText().toString());
-                    alTextBox.setText("");
-                }break;
+                    znak = '+';break;
             case '-':
-                if(a == null)
-                {
-                    znak = '-';
-                    a = Integer.parseInt(alTextBox.getText().toString());
-                    alTextBox.setText("");
-                }break;
+                    znak = '-';break;
             case '*':
-                if(a == null)
-                {
-                    znak = '*';
-                    a = Integer.parseInt(alTextBox.getText().toString());
-                    alTextBox.setText("");
-                }break;
+                    znak = '*';break;
             case '/':
-                if(a == null)
-                {
-                    znak = '/';
-                    a = Integer.parseInt(alTextBox.getText().toString());
-                    alTextBox.setText("");
-                }break;
+                    znak = '/';break;
+        }
+        if(a == null)
+        {
+            a = Integer.parseInt(alTextBox.getText().toString());
+            alTextBox.setText("");
         }
     }
 
     public void Result()
     {
-        b = Integer.parseInt(alTextBox.getText().toString());
-
-        switch (znak)
+        if(!alTextBox.getText().toString().equals(""))
         {
-            case '+':
-                result = a+b;
-                    alTextBox.setText(Double.toString(result));break;
-            case '-':
-                result = a-b;
-                    alTextBox.setText(Double.toString(result));break;
-            case '*':
-                result = a*b;
-                    alTextBox.setText(Double.toString(result));break;
-            case '/':
-                if(b == 0)
-                    alTextBox.setText("null");
-                else {
-                    result = a / b;
+
+            b = Integer.parseInt(alTextBox.getText().toString());
+
+            switch (znak) {
+                case '+':
+                    result = a + b;
                     alTextBox.setText(Double.toString(result));
+                    break;
+                case '-':
+                    result = a - b;
+                    alTextBox.setText(Double.toString(result));
+                    break;
+                case '*':
+                    result = a * b;
+                    alTextBox.setText(Double.toString(result));
+                    break;
+                case '/':
+                    if (b == 0)
+                        alTextBox.setText("null");
+                    else {
+                        result = a / b;
+                        alTextBox.setText(Double.toString(result));
 
-                }break;
+                    }
+                    break;
 
 
+            }
+            _result = true;
         }
-        _result = true;
 
     }
 
