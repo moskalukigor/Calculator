@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="alTextBox"></string>
+    <string name="alButton1">1</string>
+    <string name="alButton2">2</string>
+    <string name="alButton3">3</string>
+    <string name="alButton4">4</string>
+    <string name="alButton5">5</string>
+    <string name="alButton6">6</string>
+    <string name="alButton7">7</string>
+    <string name="alButton8">8</string>
+    <string name="alButton9">9</string>
+    <string name="alButton0">0</string>
+    <string name="alButtonAdd">+</string>
+    <string name="alButtonSub">-</string>
+    <string name="alButtonMult">*</string>
+    <string name="alButtonDiv">/</string>
+    <string name="alButtonResult">=</string>
+    <string name="alButtonClear">C</string>
+
+</resources>
